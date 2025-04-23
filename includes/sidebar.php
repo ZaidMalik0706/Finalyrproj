@@ -13,29 +13,29 @@ if (isset($_SESSION['role'])) {
 
     // Sidebar navigation items
     $sidebar_items = [
-        ['label' => 'Dashboard', 'link' => '../dashboard.php'],
+        ['label' => 'Dashboard', 'link' => '../../Finalyrproj/dashboard.php'],
         ['label' => 'Invoice', 'link' => '#invoice', 'submenu' => [
-            ['label' => 'Create Invoice', 'link' => '../../INVOICE_SYSTEM_FINAL/templates/create_invoice.php'],
-            ['label' => 'Manage Invoice', 'link' => '../../INVOICE_SYSTEM_FINAL/templates/manage_invoices.php']
+            ['label' => 'Create Invoice', 'link' => '../../Finalyrproj/templates/create_invoice.php'],
+            ['label' => 'Manage Invoice', 'link' => '../../Finalyrproj/templates/manage_invoices.php']
         ]],
         ['label' => 'Products', 'link' => '#products', 'submenu' => [
-            ['label' => 'Add Products', 'link' => '../../INVOICE_SYSTEM_FINAL/templates/add_product.php'],
-            ['label' => 'Manage Products', 'link' => '../../INVOICE_SYSTEM_FINAL/templates/manage_products.php']
+            ['label' => 'Add Products', 'link' => '../../Finalyrproj/templates/add_product.php'],
+            ['label' => 'Manage Products', 'link' => '../../Finalyrproj/templates/manage_products.php']
         ]],
         ['label' => 'Customers', 'link' => '#cust', 'submenu' => [
-            ['label' => 'Add Customer', 'link' => '../../INVOICE_SYSTEM_FINAL/templates/add_customer.php'],
-            ['label' => 'Manage Customers', 'link' => '../../INVOICE_SYSTEM_FINAL/templates/manage_customers.php']
+            ['label' => 'Add Customer', 'link' => '../../Finalyrproj/templates/add_customer.php'],
+            ['label' => 'Manage Customers', 'link' => '../../Finalyrproj/templates/manage_customers.php']
         ]],
         ['label' => 'Profile', 'link' => '#profile', 'submenu' => [
-            ['label' => 'Logout', 'link' => '../../INVOICE_SYSTEM_FINAL/logout.php']
+            ['label' => 'Logout', 'link' => '../../Finalyrproj/logout.php']
         ]]
     ];
 
     // Conditionally add User Management based on role
     if ($user_role === 'Admin') {
         $sidebar_items[] = ['label' => 'User Management', 'link' => '#userSubmenu', 'submenu' => [
-            ['label' => 'Add User', 'link' => '../../INVOICE_SYSTEM_FINAL/templates/add_user.php'],
-            ['label' => 'Manage Users', 'link' => '../../INVOICE_SYSTEM_FINAL/templates/manage_users.php']
+            ['label' => 'Add User', 'link' => '../../Finalyrproj/templates/add_user.php'],
+            ['label' => 'Manage Users', 'link' => '../../Finalyrproj/templates/manage_users.php']
         ]];
     }
 

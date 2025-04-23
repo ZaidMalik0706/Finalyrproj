@@ -23,7 +23,7 @@ if (isset($_GET['id'])) {
 
             // Check if deletion was successful
             if ($stmt_invoice->affected_rows > 0) {
-                echo "Invoice deleted successfully.";
+                header('Location: ../templates/manage_invoices.php');
             } else {
                 echo "No invoice found with ID: " . $invoice_id;
             }

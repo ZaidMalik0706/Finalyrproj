@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $customerId = $_POST['customer_id'];
     $customer_name = $_POST['customer_name'];
     $customer_email = $_POST['customer_email'];
     $customer_address = $_POST['customer_address'];
@@ -122,6 +123,7 @@ button[type="submit"]:hover {
         <div class="containerr">
             <h1 style="text-align: center;">Edit Customer</h1>
             <form action="edit_customer.php?id=<?php echo $customerId; ?>" method="POST">
+            <input type="hidden" name="customer_id" value="<?php echo $customer['id']; ?>">
                 <label for="customer_name">Name:</label>
                 <input type="text" id="customer_name" name="customer_name" value="<?php echo $customer['name']; ?>" required><br>
                 
